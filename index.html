@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Sushi</title>
+    <style>* {
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body {
+        min-height: 100vh;
+        background: rgb(134, 134, 134);
+        color: white;
+        display: grid;
+        place-items: center;
+    }
+
+    section{
+        background: rgba(255,255,255,0.2);
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    p{
+        font-size: 100px;
+    }
+    </style>    
+</head>
+<body>
+    <section>
+        <h1>Contador de Sushi</h1>
+        <p id="resultado">0</p>
+        <button onclick="aumentar()">+1</button>
+        <button onclick="diminuir()">-1</button>
+    </section>    
+
+    <script>
+
+        //estado da aplicação
+        let numero =0
+
+        //alteradores de estado
+        function aumentar() {
+            numero +=1
+            mostrarNaTelal()
+        }
+        function diminuir() {
+            numero -=1
+            mostrarNaTelal()
+        }
+    // jogar estado da aplicação na tela
+        function mostrarNaTelal (){
+            const p = document.querySelector("#resultado")
+            console.log(p)
+            p.innerText = numero
+        }
+    //iniciar
+    mostrarNaTelal()
+    </script>
+</body>
+</html>
